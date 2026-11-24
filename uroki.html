@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уроки математики</title>
+
+    <!-- ОФОРМЛЕНИЕ СТРАНИЦЫ (CSS) -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #243447;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4f7cff, #6c5ce7);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .class-block {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .class-title {
+            font-size: 25px;
+            font-weight: bold;
+            margin: 0 0 20px;
+            color: #4f5bd5;
+            border-bottom: 2px solid #eef0ff;
+            padding-bottom: 12px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            gap: 15px;
+        }
+
+        .lesson {
+            display: block;
+            text-decoration: none;
+            color: #243447;
+            background: #f7f8ff;
+            border: 2px solid #e7e9ff;
+            border-radius: 14px;
+            padding: 18px;
+            transition: 0.2s;
+        }
+
+        .lesson:hover {
+            transform: translateY(-3px);
+            border-color: #667eea;
+            background: #eef0ff;
+            box-shadow: 0 5px 12px rgba(79,124,255,0.15);
+        }
+
+        .lesson-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .lesson-description {
+            font-size: 13px;
+            color: #7b8190;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8a8f9d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .class-block {
+                padding: 18px;
+            }
+        }
+        /* Дополнительные элементы каталога уроков */
+        .subject-title {
+            font-size: 19px;
+            color: #4f5bd5;
+            margin: 20px 0 12px;
+        }
+
+        .empty-message {
+            color: #7b8190;
+            margin: 0;
+        }
+
+        .lesson:focus-visible {
+            outline: 3px solid #4f7cff;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ШАПКА СТРАНИЦЫ -->
+<header>
+    <h1>📚 Уроки математики</h1>
+    <p>Выберите класс и тему урока</p>
+</header>
+
+<main>
+    <!--
+        КАК ДОБАВИТЬ УРОК:
+        1. Найдите нужный класс и предмет.
+        2. Скопируйте карточку <a class="lesson"> из 7 класса.
+        3. Измените href, название и описание урока.
+        4. Удалите надпись «Уроки скоро появятся», если она есть.
+        5. Поместите HTML-файл урока рядом с этой страницей
+           или укажите относительный путь к нему в href.
+    -->
+
+    <!-- 5 КЛАСС -->
+    <section class="class-block">
+        <h2 class="class-title">5 класс</h2>
+        <div class="lessons">
+            <p class="empty-message">Уроки скоро появятся</p>
+        </div>
+    </section>
+
+    <!-- 6 КЛАСС -->
+    <section class="class-block">
+        <h2 class="class-title">6 класс</h2>
+        <div class="lessons">
+            <p class="empty-message">Уроки скоро появятся</p>
+        </div>
+    </section>
+
+    <!-- 7 КЛАСС -->
+    <section class="class-block">
+        <h2 class="class-title">7 класс</h2>
+
+        <!-- АЛГЕБРА -->
+        <h3 class="subject-title">Алгебра</h3>
+        <div class="lessons">
+            <a class="lesson" href="odnochlen.html">
+                <div class="lesson-name">Одночлен и его стандартный вид</div>
+                <div class="lesson-description">Теория · Примеры · Практика</div>
+            </a>
+        </div>
+
+        <!-- ГЕОМЕТРИЯ -->
+        <h3 class="subject-title">Геометрия</h3>
+        <div class="lessons">
+            <p class="empty-message">Уроки скоро появятся</p>
+        </div>
+    </section>
+
+    <!-- 8 КЛАСС -->
+    <section class="class-block">
+        <h2 class="class-title">8 класс</h2>
+
+        <!-- АЛГЕБРА -->
+        <h3 class="subject-title">Алгебра</h3>
+        <div class="lessons">
+            <p class="empty-message">Уроки скоро появятся</p>
+        </div>
+
+        <!-- ГЕОМЕТРИЯ -->
+        <h3 class="subject-title">Геометрия</h3>
+        <div class="lessons">
+            <p class="empty-message">Уроки скоро появятся</p>
+        </div>
+    </section>
+
+    <!-- 9 КЛАСС -->
+    <section class="class-block">
+        <h2 class="class-title">9 класс</h2>
+
+        <!-- АЛГЕБРА -->
+        <h3 class="subject-title">Алгебра</h3>
+        <div class="lessons">
+            <p class="empty-message">Уроки скоро появятся</p>
+        </div>
+
+        <!-- ГЕОМЕТРИЯ -->
+        <h3 class="subject-title">Геометрия</h3>
+        <div class="lessons">
+            <p class="empty-message">Уроки скоро появятся</p>
+        </div>
+    </section>
+
+</main>
+
+<!-- ПОДВАЛ СТРАНИЦЫ -->
+<footer>
+    Уроки математики • Учимся с удовольствием 😊
+</footer>
+
+</body>
+</html>
